@@ -43,5 +43,59 @@ namespace CustomListtests
 
         }
 
+        public void AddMethod_CountIncrements_CountShouldIncrease()
+        {
+
+            //arrange
+
+            CustomList<string> myList = new CustomList<string>();
+
+
+            //act
+
+            myList.Add("hello");
+         
+
+            //assert
+
+            Assert.AreEqual("hello", myList.Count);
+        }
+
+        public void AddMethod_CapacityIncreasesWhenExceeded_CapacityShouldDouble() //needs to change
+        {
+
+            //arrange
+
+            CustomList<string> myList = new CustomList<string>();
+
+
+            //act
+
+            myList.Add("hello");
+
+
+            //assert
+
+            Assert.AreEqual("hello", myList.Capacity);
+        }
+
+        public void AddMethod_OneItemPersistsAfterCapacityIsIncreased_AtLeastOneOriginalItemIsTheSame() //needs to change
+        {
+
+            //arrange
+
+            CustomList<string> myList = new CustomList<string>();
+
+
+            //act
+
+            myList.Add("hello");
+
+
+            //assert
+
+            Assert.AreEqual("hello", myList.Capacity);
+        }
+
     }
 }
