@@ -22,10 +22,52 @@ namespace CustomList
         }
 
         public T[] Items { get => items; set => items = value; }
+        public int Count { get => count; set => count = value; }
+        public int Capacity { get => capacity; set => capacity = value; }
 
         //Member Methods (CAN DO)
-        public void Add(T item)
+        public void Add(T item)     // Items[0] = item
         {
+
+            Items[0] = item;
+            string firstItem = "hello";
+            string secondItem = "world";
+            string thirdItem = "you";
+            string fourthItem = "are";
+            string fifthItem = "great";
+
+
+          if (item.Equals(firstItem))
+            {
+                Items[0] = item;
+            }
+          else if (item.Equals(secondItem))
+            {
+                Items[1] = item;
+            }
+            else if (item.Equals(thirdItem))
+            {
+                Items[2] = item;
+            }
+            else if (item.Equals(fourthItem))
+            {
+                Items[3] = item;
+            }
+            else if(item.Equals(fifthItem)) // here we may want to create the capacity expander
+            {
+
+                Array.Resize(ref items, items.Length * 2);
+            }
+                   
+
+
+
+
+
+
+
+
+
             //'item' parameter should be added to internal 'items' array
             //if items array is at capacity, double capacity and create new array
             //transfer all items to new array

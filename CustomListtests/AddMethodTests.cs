@@ -76,10 +76,10 @@ namespace CustomListtests
 
             //assert
 
-            Assert.AreEqual("hello", myList.Capacity);
+            Assert.AreEqual(4, myList.Capacity);
         }
 
-        public void AddMethod_OneItemPersistsAfterCapacityIsIncreased_AtLeastOneOriginalItemIsTheSame() //needs to change
+        public void AddMethod_OneItemPersistsAfterCapacityIsIncreased_AtLeastOneOriginalItemIsTheSame() //May be incorrect
         {
 
             //arrange
@@ -94,7 +94,7 @@ namespace CustomListtests
 
             //assert
 
-            Assert.AreEqual("hello", myList.Capacity);
+            Assert.AreEqual("hello", myList.Items[0]);
         }
 
     }
