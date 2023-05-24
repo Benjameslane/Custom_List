@@ -35,11 +35,14 @@ namespace CustomList
             string thirdItem = "you";
             string fourthItem = "are";
             string fifthItem = "great";
+            int maxFour = 4;
 
-
+        
           if (item.Equals(firstItem))
             {
                 Items[0] = item;
+               
+                
             }
           else if (item.Equals(secondItem))
             {
@@ -52,13 +55,16 @@ namespace CustomList
             else if (item.Equals(fourthItem))
             {
                 Items[3] = item;
-            }
-            else if(item.Equals(fifthItem)) // here we may want to create the capacity expander
-            {
 
+            } 
+            else if (Items.Length.Equals(maxFour))
+            {
                 Array.Resize(ref items, items.Length * 2);
             }
-                   
+
+
+
+           
 
 
 

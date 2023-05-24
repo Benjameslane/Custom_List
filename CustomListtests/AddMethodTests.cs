@@ -1,7 +1,7 @@
 using CustomList;
 
 
-namespace CustomListtests
+namespace CustomListTestAdd
 {
     [TestClass]
     public class AddMethodTests
@@ -61,7 +61,7 @@ namespace CustomListtests
             Assert.AreEqual("hello", myList.Count);
         }
 
-        public void AddMethod_CapacityIncreasesWhenExceeded_CapacityShouldDouble() //needs to change
+        public void AddMethod_CapacityIncreasesWhenExceeded_CapacityShouldDouble() //needs to change. Could I do an if statement to double capacity?
         {
 
             //arrange
